@@ -35,6 +35,9 @@ import { CategoryComponent } from './Components/category/category.component';
 import { CategoryDialogComponent } from './Components/category-dialog/category-dialog.component';
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { UserLoginComponent } from './Components/user-login/user-login.component';
+import { MainLayoutComponent } from './Components/main-layout/main-layout.component';
+import { DeleteComponent } from './Components/delete/delete.component';
+import { SignUpComponent } from './Components/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -54,7 +57,10 @@ import { UserLoginComponent } from './Components/user-login/user-login.component
     CategoryComponent,
     CategoryDialogComponent,
     ProductDetailsComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    MainLayoutComponent,
+    DeleteComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

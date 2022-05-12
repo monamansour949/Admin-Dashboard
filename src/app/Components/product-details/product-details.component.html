@@ -1,43 +1,43 @@
 <div class="card mb-4">
     <div class="card-body p-4" >
 
-      <div class="row align-items-center" *ngFor="let prd of productList">
+      <div class="row align-items-center">
         <div class="col-md-2"  >
-          <img  src="http://localhost:34300/Resources/Images/{{prd.image}}"
+          <img  src="http://localhost:34300/Resources/Images/{{product.image}}"
             class="img-fluid" alt="Generic placeholder image">
         </div>
         <div class="col-md-2 d-flex justify-content-center">
             <div>
               <p class="small text-muted mb-4 pb-2">No</p>
-              <p class="lead fw-normal mb-0">{{prd.id}}</p>
+              <p class="lead fw-normal mb-0">{{product.id}}</p>
             </div>
           </div>
 
         <div class="col-md-2 d-flex justify-content-center">
           <div>
             <p class="small text-muted mb-4 pb-2">Name</p>
-            <p class="lead fw-normal mb-0">{{prd.name}}</p>
+            <p class="lead fw-normal mb-0">{{product.name}}</p>
           </div>
         </div>
      
         <div class="col-md-2 d-flex justify-content-center">
           <div>
             <p class="small text-muted mb-4 pb-2">Price</p>
-            <p class="lead fw-normal mb-0">{{prd.price |currency :' EGP '}}</p>
+            <p class="lead fw-normal mb-0">{{product.price |currency :' EGP '}}</p>
           </div>
         </div>
            
         <div class="col-md-2 d-flex justify-content-center">
             <div>
               <p class="small text-muted mb-4 pb-2">Quantity</p>
-              <p class="lead fw-normal mb-0">{{prd.quantity}}</p>
+              <p class="lead fw-normal mb-0">{{product.quantity}}</p>
             </div>
           </div>
 
         <div class="col-md-2 d-flex justify-content-center">
           <div>
             <p class="small text-muted mb-4 pb-2">Category</p>
-            <p class="lead fw-normal mb-0">{{prd.categoryId}}</p>
+            <p class="lead fw-normal mb-0">{{product.categoryId}}</p>
           </div>
         </div>
       </div>

@@ -45,7 +45,8 @@ private httpOptions;
   }
   deleteProduct(prdId :number)
   {
-    return this.httpClient.delete<IProduct>(`${environment.apiProductUrl}/Product/${prdId}`);
     
+     return this.httpClient.delete<IProduct>(`${environment.apiProductUrl}/Product/${prdId}`);
+ 
   }
 }

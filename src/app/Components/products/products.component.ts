@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { CategoryService } from 'src/app/Services/category.service';
 import { Icategory } from 'src/app/Models/icategory';
+import { DeleteComponent } from '../delete/delete.component';
 
 @Component({
   selector: 'app-products',
@@ -19,9 +20,11 @@ export class ProductsComponent implements OnInit {
 
   productList:IProduct[]=[];
   categoryList : Icategory[]=[];
+  ref :string='';
   progress: number=0;
   message: string='null';
   @Output() public onUploadFinished = new EventEmitter();
+
 
     constructor(private formBuilder:FormBuilder ,public dialog: MatDialog,
       private prodService:ProductServiceService, private router: Router,
@@ -61,8 +64,30 @@ ngOnChanges(): void {
 
       });
     }
-    DecreaseQuantity(prd:IProduct){
-      prd.quantity=prd.quantity-1;
+
+    Success(id:number): void {
+
+
+      const dialogConfig = new MatDialogConfig();
+  
+      dialogConfig.data=id;
+  
+      const dialogRef = this.dialog.open(DeleteComponent,dialogConfig );
+  
+      dialogRef.afterClosed().subscribe(dialogResult => {
+  
+      this.ref = dialogResult;
+  
+  
+  
+      this.prodService.getAllProducts().subscribe(prdList=>{this.productList=prdList;});
+        
+  
+      });
+  
+     
+  
     }
+  
   }
   
