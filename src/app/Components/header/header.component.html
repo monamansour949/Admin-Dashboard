@@ -1,0 +1,42 @@
+<mat-toolbar>
+    <mat-toolbar-row class="justify-content-between">
+      <button mat-icon-button (click)="toggleSidebar()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="row mr-2 ml-auto">
+        <ul class="row m-0 align-items-center">
+          <li>
+            <button
+              mat-button
+              [matMenuTriggerFor]="menu"
+              class="user mt-2 d-flex align-items-center"
+            >
+              <img src="https://source.unsplash.com/c_GmwfHBDzk/200x200" alt="" class="user-image mr-1 p-2" />
+  
+              User Name
+              <mat-icon class="user-image-icon ml-1"
+                >keyboard_arrow_down</mat-icon
+              >
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                Logout
+              </button>
+            </mat-menu>
+
+         <!--    <form *ngIf="!loginservice.isUserAuthenticated()" [ngClass]="{'active': loginStatus}" [formGroup]="loginForm" (ngSubmit)="LogIn()"class="login-form">
+                <h3>login now</h3>
+                <div *ngIf="invalidLogin" class="alert alert-danger">Invalid Email or Password</div>
+                <input type="email" placeholder="your email" class="box" formControlName="email">
+                <input type="password" placeholder="your password" class="box" formControlName="password">
+                <p>don't have an account <a (click)="onlink()" routerLinkActive="active" routerLink="register">create now</a></p>
+                <input type="submit" value="login now" class="btn">
+            </form> -->
+
+
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
